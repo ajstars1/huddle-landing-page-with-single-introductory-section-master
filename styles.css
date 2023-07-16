@@ -23,19 +23,24 @@ main{
     width: 100%;
 }
 .left{
+    display: flex;
     padding: 2rem;
 }
 .right{
     padding: 2rem;
+    display: flex;
     color: white;
     width: 40%;
+    flex-direction: column;
 }
+
 .btn{
     background-color: white;
     color: var(--Violet);
+    width: 50%;
     border: none;
     border-radius: 1.5rem;
-    padding: 1rem 4rem;
+    padding: 1rem;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
@@ -61,3 +66,40 @@ ion-icon:hover{
     color: var(--SoftMagenta);
 }
 
+@media screen and (max-width: 375px){
+    .logo{
+        margin: 0.5rem;
+        width: 50%;
+    }
+    .illustration{
+        width:100%;
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 750px){
+    body{
+        background-image: url("./images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    main{
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 0;
+        align-items: center;
+    }
+    .illustration{
+        width: 70%;
+    }
+    .right{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+    .left, .right , .icons{
+        justify-content: center;
+        padding: 0;
+    }
+}
